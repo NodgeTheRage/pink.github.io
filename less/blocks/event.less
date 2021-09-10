@@ -1,0 +1,704 @@
+.event {
+    padding-top: 45px;
+    padding-bottom: 14px;
+    margin: 0 auto;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+}
+.credentials__label {
+    color: #d22856;
+    font-size: 14px;
+    padding-left: 22px;
+}
+.event__title {
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+}
+.event__titles {
+    color: #d22856;
+    font-size: 14px;
+    margin: 0 auto 34px;
+    width: 230px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+.credentials__break{
+    display: block;
+}
+.event__add {
+    display: none;
+}
+.credentials__data {
+    border: 2px solid #e5e5e5;
+    padding: 24px 24px 20px 20px;
+    color: #283645;
+    margin-top: 5px;
+    width: 232px;
+    outline: none;
+    &::placeholder {
+        color: #283645;
+        line-height: 30px;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+    &:hover {
+        border-color: #283645;
+    }
+    &:focus,
+    &:active {
+        border-color: #d22856;
+    }
+}
+.emotions {
+    padding-top: 38px;
+}
+.emotions__title {
+    margin-bottom: 15px;
+}
+.travel,
+.achievements {
+    background-color: #f2f2f2;
+    padding-top: 38px;
+
+}
+.achievements {
+    padding-bottom: 4px;
+    margin-bottom: -2px;
+}
+.travel {
+    padding-bottom: 7px;
+
+}
+.credentials {
+    padding-top: 32px;
+    padding-bottom: 27px;
+}
+.event__list {
+    width: 320px;
+    margin: 0 auto;
+}
+.credentials__item {
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.achievements__item {
+    margin-bottom: 45px;
+    padding-top: 7px;
+    display: flex;
+    margin-left: 15px;
+}
+.achievements__item:nth-last-child(1) {
+    margin-bottom: 50px;
+}
+.achievements__label {
+    cursor: pointer;
+    font-size: 18px;
+}
+.event__titles--hide {
+    display: none;
+}
+.achievements__checkbox {
+    position: relative;
+    width: 0;
+    height: 17px;
+    outline: none;
+    margin-right: 71px;
+    margin-top: -2px;
+    &:checked::after {
+        content: "";
+        display: block;
+        background: url("../img/icon-form-check.svg") no-repeat;
+        background-position: center;
+        background-color: white;
+        width: 29px;
+        height: 25px;
+        padding: 5px 3px;
+        top: 0;
+        left: 0;
+        border: 2px solid #e5e5e5;
+        cursor: pointer;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 29px;
+        height: 25px;
+        padding: 5px 3px;
+        top: 0;
+        left: 0;
+        border: 2px solid #e5e5e5;
+        cursor: pointer;
+        background-color: white;
+    }
+    &:hover::after {
+        border-color: #283645;
+    }
+    &:active::after {
+        border-color: #d22856;
+    }
+}
+.travel__item {
+    margin-bottom: 40px;
+    margin-left: 16px;
+}
+.travel__label {
+    cursor: pointer;
+}
+.travel__device {
+    position: relative;
+    width: 0;
+    height: 17px;
+    outline: none;
+    margin-right: 62px;
+    margin-top: 10px;
+    margin-left: 6px;
+    &:checked::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #d22856;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        top: 0;
+        left: 0;
+        border: 10px solid white;
+        cursor: pointer;
+        margin-top: -6px;
+
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        top: 0;
+        left: 0;
+        border: 10px solid white;
+        cursor: pointer;
+        margin-top: -6px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        background-color: #e5e5e5;
+        border-radius: 50%;
+        width: 39px;
+        height: 39px;
+        top: -2px;
+        left: -2px;
+        cursor: pointer;
+        margin-top: -6px;
+    }
+    &:hover::before {
+        background-color: #283645;
+    }
+    &:active::before {
+        background-color: #d22856;
+    }
+}
+@-moz-document url-prefix() {
+    .travel__label {
+        position: relative;
+    }
+    .achievements__label {
+        position: relative;
+    }
+    .achievements__checkbox:checked ~ .achievements__label {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background: url("../img/icon-form-check.svg") no-repeat;
+            background-position: center;
+            background-color: white;
+            width: 29px;
+            height: 25px;
+            padding: 5px 3px;
+            top: 0;
+            left: -80px;
+            border: 2px solid #e5e5e5;
+            cursor: pointer;
+        }
+    }
+    .achievements__checkbox ~ .achievements__label {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 29px;
+            height: 25px;
+            padding: 5px 3px;
+            top: 0;
+            left: -80px;
+            border: 2px solid #e5e5e5;
+            cursor: pointer;
+            background-color: white;
+        }
+    }
+    .travel__device:checked ~ .travel__label {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #d22856;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            top: 0;
+            left: -74px;
+            border: 10px solid white;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+    }
+    .travel__device ~ .travel__label{
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            top: 0;
+            left: -74px;
+            border: 10px solid white;
+            cursor: pointer;
+            margin-top: -6px;
+        }}
+    .travel__device ~ .travel__label {
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            background-color: #e5e5e5;
+            border-radius: 50%;
+            width: 39px;
+            height: 39px;
+            top: -2px;
+            left: -76px;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+    }
+    .travel__device ~ .travel__label {
+        &:hover::before {
+            background-color: #283645;
+        }
+        &:active::before {
+            background-color: #d22856;
+        }
+
+    }
+    .achievements__checkbox ~ .achievements__label {
+        &:hover::after {
+            border-color: #283645;
+        }
+        &:active::after {
+            border-color: #d22856;
+        }
+    }
+}
+.emotions {
+    text-align: center;
+}
+.event__text {
+    display: inline-block;
+    height: 195px;
+    width: 275px;
+    border: 2px solid #e5e5e5;
+    outline: none;
+    margin-bottom: 5px;
+    resize:vertical;
+    &::placeholder {
+        color: #283645;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+        width: 240px;
+        padding-left: 20px;
+        padding-top: 14px;
+    }
+    &:hover {
+        border-color: #283645;
+    }
+    &:focus,
+    &:active {
+        border-color: #d22856;
+    }
+}
+.event__button {
+    display: block;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    padding: 22px 37px 20px 33px;
+    margin: 35px auto;
+    width: 280px;
+    background-color: #2aab6d;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    &:hover {
+        background-color: #1c9b5e;
+    }
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    &:disabled {
+        opacity: 0.3;
+        background-color: #283645;
+    }
+}
+.event__required {
+    margin: 0 auto;
+    width:  184px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.event__star {
+    color: #d22856;
+}
+.event__intro {
+    display: none;
+}
+@media (min-width: @tablet-width){
+    .event {
+        padding-top: 92px;
+    }
+    .credentials {
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+    .credentials-second {
+        order: 3;
+        padding: 55px 0px 20px 21px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .event__form {
+        display: flex;
+        width: 660px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .event__intro {
+        display: block;
+    }
+    .event__title {
+        font-size: 18px;
+        line-height: 30px;
+        width: 550px;
+    }
+    .credentials__item {
+        width: 660px;
+        margin-left: 0;
+        margin-bottom: 47px;
+    }
+    .event__list {
+        width: 660px;
+        margin: 0 auto;
+        padding-top: 34px;
+    }
+    .credentials__break {
+        display: none;
+    }
+    .credentials__data {
+        margin-left: 15px;
+        width: 477px;
+        &--long {
+            width: 516px;
+        }
+    }
+    .credentials__label {
+        padding-left: 20px;
+    }
+    .travel {
+        order: 2;
+        position: relative;
+        padding-top: 20px;
+        padding-left: 21px;
+        background-color: #fff;
+    }
+
+    .achievements {
+        order: 4;
+    }
+    .emotions {
+        order: 5;
+        border: 2px solid #e5e5e5;
+        width: 618px;
+        box-sizing: border-box;
+        width: 618px;
+        margin: 62px auto 31px;
+        padding-top: 46px;
+        padding-bottom: 39px;
+        position: relative;
+    }
+    .event__text {
+        width: 490px;
+        height: 185px;
+        &::placeholder {
+            width: 475px;
+            padding-left:15px;
+            padding-top: 11px;
+        }
+    }
+    .event__required,
+    .event__button {
+        order: 6;
+    }
+    .event__required {
+        margin-top: 53px;
+        margin-right: 15px;
+    }
+    .event__button {
+        margin-left: 20px;
+        margin-top: 35px;
+        margin-bottom: 37px; 
+        text-transform: uppercase;
+        width: 300px;
+    }
+    .event__titles {
+        width: 330px;
+        background-color: white;
+        position: absolute;
+        top: 3.3%;
+        left: 25.8%;
+    }
+    .credentials-second .event__titles{
+        top: 12.9%;
+        left: 31.2%;
+        width: 260px;
+    }
+    .achievements .event__titles{
+        top: 6.6%;
+        left: 17.9%;
+        width: 430px;
+    }
+    .emotions .event__titles{
+        top: -10px;
+        left: 177px;
+        width: 260px;
+    }
+    .travel__device {
+        margin-right: 55px;
+    }
+    .travel__list {
+        border: 2px solid #e5e5e5;
+        box-sizing: border-box;
+        width: 618px;
+        padding-top: 51px;
+        padding-left: 36px;
+        padding-bottom: 20px;
+    }
+    .credentials__list-second{
+        border: 2px solid #e5e5e5;
+        width: 618px;
+        padding-left: 43px;
+        box-sizing: border-box;
+        padding-top: 42px;
+    }
+    .achievements {
+        position: relative;
+        background-color: #fff;
+        padding-left: 20px;
+        padding-top: 47px;
+    }
+    .achievements__list {
+        border: 2px solid #e5e5e5;
+        width: 618px;
+        box-sizing: border-box;
+        padding-top: 47px;
+        padding-left: 38px;
+    }
+    .achievements__checkbox {
+        margin-right: 60px;
+    }
+    .achievements__label {
+        padding-top: 1px;
+    }
+
+    .credentials__list-second .credentials__item {
+        margin-bottom: 24px;
+    }
+    .credentials__label-second {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        position: relative;
+        width: 500px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 62px;
+            height: 63px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #e5e5e5;
+            z-index: 2;
+            top: 5px;
+            right: -15px;
+        }
+        &--phone::before {
+            background-image: url(../img/icon-phone.svg);
+            }
+            &--mail::before {
+                background-image: url(../img/icon-mail.svg);
+                }
+    }
+    .credentials__data-second {
+        width: 438px;
+        margin-bottom: 9px;
+        position: relative;
+        padding: 22px 25px 20px 17px;
+        min-height: 63px;
+        box-sizing: border-box;
+    }
+    .credentials__mail,
+    .credentials__phone {
+        margin-left: 34px;
+    }
+    .event__titles--hide {
+        display: block;
+    }
+}
+@media (min-width: @desktop-width) {
+    .event {
+        padding-bottom: 0;
+    }
+    .event__title {
+        width: 759px;
+    }
+    .event__intro {
+        display: inline-block;
+    }
+    .event__form {
+        width: 980px;
+    }
+    .credentials {
+        width: 490px;
+        padding-top: 45px;
+        box-sizing: border-box;
+    }
+    .credentials__data {
+        margin-left: 15px;
+        width: 291px;
+        &--long {
+            width: 331px;
+        }
+    }
+    .credentials__item {
+        width: 490px;
+        margin-bottom: 48px;
+    }
+    .travel {
+        width: 490px;
+        box-sizing: border-box;
+        margin-top: 59px;
+    }
+    .travel__list {
+        width: 435px;
+        margin-left: 14px;
+        padding-left: 55px;
+        padding-top: 54px;
+        padding-bottom: 18px;
+    }
+    .travel__device {
+        margin-right: 53px;
+    }
+    .event__titles {
+        width: 360px;
+        top: 3.3%;
+        left: 14.6%;
+    }
+    .credentials-second {
+        width: 980px;
+        padding-top: 17px;
+        padding-left: 0px;
+    }
+    .credentials__list-second {
+        width: 940px;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 37px;
+        padding-bottom: 14px;
+    }
+    .credentials__label-second {
+        width: 375px;
+    }
+    .credentials-second .event__titles {
+        top: 4.3%;
+        left: 36.7%;
+    }
+    .credentials__list-second .credentials__item {
+        margin: 0;
+        width: 450px;
+    }
+    .credentials__mail, .credentials__phone {
+        width: 400px;
+    }
+    .achievements {
+        width: 980px;
+    }
+    .achievements__list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 40px 9px 9px 54px;
+        box-sizing: border-box;
+        width: 940px;
+        justify-content: center;
+        height: 231px;
+        margin-left: 0;
+    }
+    .achievements__item {
+        margin-right: 23px;
+        margin-left: 0px;
+    }
+    .achievements .event__titles {
+        top: 13.2%;
+        left: 28%;
+    }
+    .emotions {
+        width: 940px;
+        padding-top: 42px;
+        margin-top: 62px;
+        padding-bottom: 31px;
+    }
+    .emotions .event__titles {
+        top: -10px;
+        left: 338px;
+    }
+    .event__text {
+        width: 812px;
+        height: 120px;
+
+    }
+    .event__button {
+        margin-top: 33px;
+        margin-bottom: 0;
+    }
+    .event__add {
+        display: inline-block;
+    }
+    .event__required {
+        margin-top: 51px;
+        width: 320px;
+    }
+    .credentials__data-second {
+        width: 315px;
+        z-index: 2;
+    }
+}
+

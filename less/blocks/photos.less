@@ -1,0 +1,242 @@
+.photos {
+    color: #283645;
+}
+.photos__wrapper {
+    padding-top: 45px;
+    width: 100%;
+    margin: 0 auto;
+}
+.photos__desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #283645;
+    line-height: 30px;
+    max-width: 250px;
+    margin: 0 auto 49px auto;
+    text-align: center;
+}
+.photocard {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    text-align:center;
+}
+.photocard__link {
+    display:inline-block;
+    &--best {
+        position: relative;
+        width: 320px;
+    }
+    &--best::after {
+        content: "панорама дня";
+        position: absolute;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #d22856;
+        width: 140px;
+        height: 27px;
+        top: 0px;
+        right: 20px;
+        text-align: center;
+        padding-top: 9px;
+        font-size: 12px;
+        font-weight: 700;
+        pointer-events: none;
+        }
+}
+.photocard__item {
+    display:inline-block;
+    width: 280px;
+    margin-bottom: 20px;
+    flex-basis: 100%;
+    font-size: 0;
+}
+.photocard__block{
+    background-color: #f2f2f2;
+    width: 280px;
+    margin: 0 auto;
+    text-align:left;
+    box-sizing:border-box;
+    padding: 18px 10px 22px 17px
+}
+.photocard__author {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+}
+.photocard__time {
+    padding-left: 4px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+.photocard__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+.photocard__like {
+    display: flex;
+    padding-top: 14px;
+    padding-left: 1px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #d22856;
+}
+.like__button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-image: url(../img/icon-heart.svg);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 12px;
+    background-color: transparent;
+    margin-right: 19px;
+}
+@media (min-width: @tablet-width) {
+    .photos__desc {
+        max-width: 440px;
+        font-size: 18px;
+        margin-bottom: 76px;
+    }
+    .photos__wrapper {
+        padding-top: 92px;
+    }
+    .photocard {
+        width: 660px;
+        text-align: left;
+        overflow: hidden;
+        justify-content: space-around;
+    }
+    .photocard__block {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 24px 9px 24px 28px;
+    }
+    .like {
+        padding-top: 0;
+        margin-right: 0;
+        display: flex;
+    }
+    .like__button {
+        order: 3 ;
+        margin-left: 17px;
+    }
+    .like__count {
+        margin-left: 3px;
+    }
+    .photocard__item {
+        flex-basis: 0;
+        &:nth-child(2n+1) {
+            margin-right: 20px;
+        }
+        &:first-child {
+            margin-right: 0;
+        }
+        &:not(.photocard__item--best) .photocard__block{
+            min-height: 155px;
+            width: 300px;
+        }
+        &:not(.photocard__item--best) .photocard__desc {
+            min-height: 64px;
+            width: 280px;
+        }
+        &:not(.photocard__item--best) .like {
+            margin-left: -2px;
+        }
+        &:not(.photocard__item--best) .like__count {
+            width: 143px;
+        }
+        &:not(.photocard__item--best) .like__button {
+            margin-top: -4px;
+        }
+        &--best {
+            width:660px;
+            margin-bottom: 48px;
+        }
+        &--best .photocard__block {
+            width: 620px;
+            padding: 24px 10px 26px 27px;
+            margin-left: 20px;
+        }
+        &--best .photocard__desc {
+            order: 3;
+        }
+    }
+    .photocard__link {
+        height: 300px;
+        &--best { 
+            width: 660px;
+            height: 509px;
+        }
+        &--best::after {
+            top: 57px;
+            right: 20px;
+            }
+    }
+    .photocard__best {
+        transform: translateX(-20px);
+    }
+    .photocard__image {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (min-width: @desktop-width) {
+    .photos__desc {
+        max-width: 580px;
+        margin-bottom: 88px;
+    }
+    .photocard {
+        width: 1200px;
+        justify-content: center;
+
+    }
+    .photocard__link {
+        &--best {
+            width: 1200px;
+        }
+        &--best::after {
+            top: 54px;
+            right: 131px;
+            }
+    }
+    .photocard__item {
+        width: 300px;
+        margin: 0;
+        &:nth-child(2n+1) {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        &:not(.photocard__item--best) {
+            margin-top: 50px;
+            margin-bottom: 4px;
+        }
+        &--best {
+            width: 1200px;
+        }
+        &--best .photocard__block {
+            width: 940px;
+            padding-top: 21px;
+            padding-bottom: 23px;
+            margin-left: 130px;
+        }
+    }
+    .photocard__best {
+        transform: translateX(0px);
+    }
+    .photocard__image {
+        width: 300px;
+        height: 400px;
+    }
+}
